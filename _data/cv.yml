@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Amruta Anant Pandhare
     - name: Date of Birth
-      value: 14th March 1879
+      value: 23rd February 2000
     - name: Languages
-      value: English, German
+      value: English, Hindi, Marathi
 
 - title: Education
   type: time_table
@@ -31,36 +31,40 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: SOC Analyst L1
+      company: CyberNX Technologies Pvt Ltd.
+      year: 2021 - 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Familiarity with ElasticSearch SIEM tool and expertise in log analysis.
+        - Monitoring, analyzing, and investigating security alerts to ensure comprehensive threat detection.
+        - Creating and documenting incidents, accurately reporting on the incident response process.
+        - Providing recommendations for appropriate actions and solutions based on incident investigation and analysis.
+        - Developing use cases and producing reports to support security operations.
+        - Conducting noise reduction techniques to minimize false positives and optimize threat detection.
+        - Crafting Threat Advisories and conducting Threat Intelligence to inform proactive security measures.
+        - Maintaining regular communication with clients and serving as their primary point of contact.
+        - Being a dedicated SPOC for a specific client, providing personalized attention and support.
+        - Directing and supervising a team of 10-12 security professionals.
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Degree in Computer Engineering
+      institution: Vidyalankar Institute of Technology, Mumbai
+      year: 2021
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Marks - 74.78% (8.23 GPA)
+    - title: Diploma in Computer Engineering
+      institution: VPM’s Polytechnic, Mumbai
+      year: 2018
       description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
+        - Marks - 85.44%
+    - title: SSC
+      institution: Vidya Mandir, Titwala, Mumbai Suburban
+      year: 2015
+      description:
+        - Marks - 87.40%
+        
 - title: Open Source Projects
   type: time_table
   contents:
