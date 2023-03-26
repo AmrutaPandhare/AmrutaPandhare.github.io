@@ -13,9 +13,9 @@ profile:
     <p>123 your address street</p>
     <p>Your City, State 12345</p>
 
-#news: true  # includes a list of news items
-#selected_papers: true # includes a list of papers marked as "selected={true}"
-#social: true  # includes social icons at the bottom of the page
+# news: true  # includes a list of news items
+# selected_papers: true # includes a list of papers marked as "selected={true}"
+# social: true  # includes social icons at the bottom of the page
 ---
 
 𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 𝙞𝙨𝙣’𝙩 𝙨𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙮𝙤𝙪 𝙗𝙪𝙮, 𝙞𝙩’𝙨 𝙨𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙮𝙤𝙪 𝙙𝙤, 𝙖𝙣𝙙 𝙞𝙩 𝙩𝙖𝙠𝙚𝙨 𝙩𝙖𝙡𝙚𝙣𝙩𝙚𝙙 𝙥𝙚𝙤𝙥𝙡𝙚 𝙩𝙤 𝙙𝙤 𝙞𝙩 𝙧𝙞𝙜𝙝𝙩.
