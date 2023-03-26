@@ -66,14 +66,22 @@
 - title: Certifications & Courses
   type: nested_list
   contents:
-    - title: Certified AppSec Practitioner (CAP) — The SecOps Group.
+    - title: Certified AppSec Practitioner (CAP) — The SecOps Group
       items: 
         - Certified Appsec Practitioner (CAP) is an intermediate-level exam to test attendees’ knowledge on the core concepts of application security.
-    - title: Topic 2.
+    - title: Web Fundamentals Learning Path — Try Hack Me
       items:
-        - Description 1.
-        - Description 2.
-
+        - The aim of this path is to teach you how to successfully attack and exploit web applications. Knowledge of OWASP Top 10, and BurpSuite, etc.
+    - title: Practical Ethical Hacking — TCM Security
+      items:
+        - This course covered the practical side of ethical hacking and using tools like Nmap, Nikto, Burp suite, etc.
+    - title: Introduction to Network Analysis - Security Blue Team
+      items:
+        - This course covered understanding of basic networking fundamentals and the skills to analyze malicious traffic from a mock compromised system PCAPS using Wireshark and TCPDump.
+     - title: Python Data Structure — University of Michigan
+      items:
+        - This course introduced the core data structures like Strings, Files, Lists, Dictionaries, Tuples, etc.
+        
 - title: Other Interests
   type: list
   contents:
