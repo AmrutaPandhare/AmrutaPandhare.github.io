@@ -2,24 +2,30 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: || Security Operations Center (SOC) Analyst || Cyber Security Analyst || Incident Response || SIEM || ElasticSearch || AppSec ||
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  #address: >
+  #  <p>555 your office number</p>
+  #  <p>123 your address street</p>
+  #  <p>Your City, State 12345</p>
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+#news: true  # includes a list of news items
+#selected_papers: true # includes a list of papers marked as "selected={true}"
+#social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+𝙎𝙚𝙘𝙪𝙧𝙞𝙩𝙮 𝙞𝙨𝙣’𝙩 𝙨𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙮𝙤𝙪 𝙗𝙪𝙮, 𝙞𝙩’𝙨 𝙨𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙮𝙤𝙪 𝙙𝙤, 𝙖𝙣𝙙 𝙞𝙩 𝙩𝙖𝙠𝙚𝙨 𝙩𝙖𝙡𝙚𝙣𝙩𝙚𝙙 𝙥𝙚𝙤𝙥𝙡𝙚 𝙩𝙤 𝙙𝙤 𝙞𝙩 𝙧𝙞𝙜𝙝𝙩.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Hi there! I'm Amruta, I have worked as a SOC Analyst for a year and a half. My job is to ensure the security of a network by monitoring, analyzing, and responding to security alerts. I'm proficient in using ElasticSearch SIEM tool for this purpose.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+In my role, I keep a watchful eye on the network for any signs of an attack. If an attack is detected, I investigate and report it promptly. I also enjoy analyzing various log sources and developing use cases to improve our monitoring capabilities.
+
+One of my strengths is documentation, which comes in handy when creating Threat Advisory reports that detail vulnerabilities, emerging threats, and other cybersecurity risks. To stay up to date with the latest trends in cybersecurity, I regularly consult Threat Intel.
+
+I've also had the opportunity to work on a client project that was entirely based on AWS, which has helped me develop my expertise in this area. Additionally, my strong communication and management skills have been valuable assets in my interactions with clients and colleagues on a daily basis.
+
+Moreover, I am continuously learning about web application security and aim to transition to VAPT (Vulnerability Assessment and Penetration Testing) as I want to broaden my knowledge of all areas of cybersecurity.
