@@ -75,10 +75,10 @@
     - title: Practical Ethical Hacking — TCM Security
       items:
         - This course covered the practical side of ethical hacking and using tools like Nmap, Nikto, Burp suite, etc.
-    - title: Introduction to Network Analysis - Security Blue Team
+    - title: Introduction to Network Analysis — Security Blue Team
       items:
         - This course covered understanding of basic networking fundamentals and the skills to analyze malicious traffic from a mock compromised system PCAPS using Wireshark and TCPDump.
-     - title: Python Data Structure — University of Michigan
+    - title: Python Data Structure — University of Michigan
       items:
         - This course introduced the core data structures like Strings, Files, Lists, Dictionaries, Tuples, etc.
         
