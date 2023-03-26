@@ -7,7 +7,7 @@
       value: 23rd February 2000
     - name: Languages
       value: English, Hindi, Marathi
-
+      
 - title: Experience
   type: time_table
   contents:
@@ -44,40 +44,7 @@
       year: 2015
       description:
         - Marks - 87.40%
-
-- title: Certifications & Courses
-  type: nested_list
-  contents:
-    - title: Certified AppSec Practitioner (CAP) — The SecOps Group
-      items: 
-        - Certified Appsec Practitioner (CAP) is an intermediate-level exam to test attendees’ knowledge on the core concepts of application security.
-    - title: Web Fundamentals Learning Path — Try Hack Me
-      items:
-        - The aim of this path is to teach you how to successfully attack and exploit web applications. Knowledge of OWASP Top 10, and BurpSuite, etc.
-    - title: Practical Ethical Hacking — TCM Security
-      items:
-        - This course covered the practical side of ethical hacking and using tools like Nmap, Nikto, Burp suite, etc.
-    - title: Introduction to Network Analysis - Security Blue Team
-      items:
-        - This course covered understanding of basic networking fundamentals and the skills to analyze malicious traffic from a mock compromised system PCAPS using Wireshark and TCPDump.
-    - title: Python Data Structure — University of Michigan
-      items:
-        - This course introduced the core data structures like Strings, Files, Lists, Dictionaries, Tuples, etc.
-    - title: Programming for everybody (Getting started withPython) — University of Michigan
-      items:
-        - This course introduced the basics of Python like variables, functions, loops, etc.
-    - title: First Step Korean— Yonsei University
-      items:
-        - This was an elementary-level Korean language course and it covered basic consonants, vowels, and expressions used in everyday life, such as greetings, talking about family, and so on.
-    - title: Meditation: A way to achieve your goals in your life — KAIST
-      items:
-        - An interesting and thought-provoking course on how selfreflective meditation can help achieve life’s goals such as peace and contentment.
         
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
-
 - title: Open Source Projects
   type: time_table
   contents:
@@ -95,3 +62,19 @@
     - year: 2029
       items: 
         - Max Planck Medal
+
+- title: Certifications & Courses
+  type: nested_list
+  contents:
+    - title: Certified AppSec Practitioner (CAP) — The SecOps Group.
+      items: 
+        - Certified Appsec Practitioner (CAP) is an intermediate-level exam to test attendees’ knowledge on the core concepts of application security.
+    - title: Topic 2.
+      items:
+        - Description 1.
+        - Description 2.
+
+- title: Other Interests
+  type: list
+  contents:
+    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
