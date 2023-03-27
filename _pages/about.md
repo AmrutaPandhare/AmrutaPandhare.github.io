@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About Me
 permalink: /
 subtitle: Security Operations Center (SOC) Analyst || Cyber Security Analyst || Incident Response || AppSec
 
