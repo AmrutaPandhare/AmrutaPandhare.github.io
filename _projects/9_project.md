@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Booksta
-description: My Little Escape
+description: My Little Escape - Bookstagram
 img: assets/img/instagram.png
 redirect: https://instagram.com/floating.on.wordss?igshid=MTlzZWQxMDU=
 importance: 2
