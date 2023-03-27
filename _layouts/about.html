@@ -36,11 +36,11 @@ layout: default
           </div>
           {%- endif %}
 
-<!--           <div class="clearfix">
+          <div class="clearfix">
             {{ content }}
-          </div> -->
-
-          <!-- News -->
+          </div>
+              
+<!--           <!-- News -->
           {% if page.news -%}
             <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
             {%- include news.html %}
@@ -51,7 +51,7 @@ layout: default
             <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
-
+ -->
           <!-- Social -->
           {%- if page.social %}
             <div class="social">
