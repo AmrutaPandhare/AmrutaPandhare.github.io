@@ -1,8 +1,8 @@
 ---
 layout: cv
-permalink: /cv/
-title: cv
+permalink: /resume/
+title: RESUME
 nav: true
 nav_order: 4
-cv_pdf: example_pdf.pdf
+cv_pdf: Amruta Pandhare Resume - March 2023.pdf
 ---
