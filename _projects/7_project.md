@@ -4,7 +4,7 @@ title: Pico CTF
 description: Gym Score 595 and Challenges Solved 20
 img: assets/img/pico.png
 redirect: https://play.picoctf.org/users/Amruta23
-importance: 3
+importance: 1
 category: study
 ---
 
