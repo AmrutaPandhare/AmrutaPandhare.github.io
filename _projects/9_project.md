@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Books
+title: Booksta
 description: My Little Escape
 img: assets/img/instagram.png
 redirect: https://instagram.com/floating.on.wordss?igshid=MTlzZWQxMDU=
