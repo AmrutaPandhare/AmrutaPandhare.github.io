@@ -4,7 +4,7 @@ title: Try Hack Me
 description: Rank in the top 6%
 img: assets/img/tryhackme.png
 redirect: https://tryhackme.com/p/pandhareamruta23
-importance: 3
+importance: 1
 category: study
 ---
 
