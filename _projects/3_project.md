@@ -1,11 +1,11 @@
 ---
 layout: page
 title: project 3
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+description: Try Hack Me
+img: assets/img/tryhackme.png
+redirect: https://tryhackme.com/p/pandhareamruta23
 importance: 3
-category: work
+category: study
 ---
 
 Every project has a beautiful feature showcase page.
