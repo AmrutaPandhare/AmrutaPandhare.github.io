@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Pico CTF
-description: <p>Gym Score 595</p><p>Challenges Solved 20</p>
+description: Gym Score 595 Challenges Solved 20
 img: assets/img/picoctf.png
 redirect: https://play.picoctf.org/users/Amruta23
 importance: 2
