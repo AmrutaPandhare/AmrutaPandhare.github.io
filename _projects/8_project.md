@@ -3,7 +3,7 @@ layout: page
 title: Goodreads
 description: Books read 100+
 img: assets/img/goodreads.png
-redirect: https://www.goodreads.com/challenges/11633?ref=nav_profile_rc
+redirect: https://www.goodreads.com/user/show/61969654-floatingonwordss
 importance: 1
 category: fun
 ---
