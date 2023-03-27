@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 3
+title: Try Hack Me
 description: Try Hack Me
 img: assets/img/tryhackme.png
 redirect: https://tryhackme.com/p/pandhareamruta23
