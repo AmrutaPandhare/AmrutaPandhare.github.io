@@ -1,10 +1,10 @@
-<!-- ---
+---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
+title: OMR Evaluator
+description: Image Processing
+img: assets/img/Python.jpg
 importance: 3
-category: fun
+category: study
 ---
 
 Every project has a beautiful feature showcase page.
@@ -78,4 +78,4 @@ Here's the code for the last row of images above:
 </div>
 ```
 {% endraw %}
- -->
+
