@@ -7,7 +7,7 @@ importance: 3
 category: study
 ---
 
-OMR sheets have been widely used across the
+Optical Mark Recognition (OMR) sheets have been widely used across the
 globe for grading purposes. This project suggests
 an accurate and cost efficient system for the
 evaluation of the OMR sheet. Based on the image
@@ -37,12 +37,13 @@ for computation purpose.
     description: a project with a background image
     img: /assets/img/12.jpg
     --- -->
+    
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/gui.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption" font-weight="bold">
+<div class="caption">
     The main GUI was divided into two parts, left to evaluate one test at a time and right to evaluate multiple tests at once.
 </div>
 
@@ -97,6 +98,10 @@ The result gets stored in a CSV file which examiner can refer to later on.
         {% include figure.html path="assets/img/result.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<h1> Summary </h1>
-fhdjhf
+<h2> Summary </h2>
 
+1. The OMR Evaluator system can greatly benefit organizations and individuals who still rely on paper-based methods for data collection, such as surveys, feedback forms, and multiple-choice tests. Its versatility makes it particularly useful in remote areas like villages, as well as educational institutions for faculty feedback evaluation and MCQ answer-sheet evaluations.
+
+2. By eliminating the need for manual grading of questionnaires, the OMR Evaluator system can quickly and accurately recognize the opinions of test-takers. Furthermore, the system has the potential to provide extensive statistical evaluation of the collected data, including pie-charts, bubble plots, and other relevant visual representations.
+
+3. The OMR Evaluator project has been designed with the future needs of users in mind. As such, the system can be extended and further developed to include additional features and functionalities. Its flexibility and adaptability make it an ideal solution for organizations and individuals looking to transition from paper-based data collection methods to a more efficient and streamlined approach.
