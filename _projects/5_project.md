@@ -48,14 +48,14 @@ for computation purpose.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/helpmenuforscanningonesheet.jpg" title="helpmenuforscanningonesheet" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/helpmenuforscanningonesheet.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/helpmenuforscanninganentirefolder.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/helpmenuforscanninganentirefolder.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    We provided **Help** menu for effective user interaction.
+    We provided Help menus for effective user interaction.
 </div>
 
 {% raw %}
@@ -74,13 +74,16 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/whenallquestionsaremarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/whenfewquestionsareleftunmarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/whenhalfoptionismaked.jpg" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/whentwooptionsaremarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
