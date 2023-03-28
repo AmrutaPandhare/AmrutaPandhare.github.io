@@ -58,9 +58,10 @@ for computation purpose.
     We provided Help menus for effective user interaction.
 </div>
 
+We covered below mentioned conditions for the most accuracy.
+
 {% raw %}
 ```html
-We covered below mentioned conditions for the most accuracy.
 1. All questions are marked
 2. Few questions are left unmarked
 3. Half circle is marked
@@ -86,10 +87,10 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
         {% include figure.html path="assets/img/whentwooptionsaremarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
+<!-- <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
-
+ -->
 
 The code is simple.
 Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
