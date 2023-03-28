@@ -7,7 +7,7 @@ importance: 3
 category: study
 ---
 
-Ｏptical Mark Recognition (OMR) sheets have been widely used across the
+𝐎ptical Mark Recognition (OMR) sheets have been widely used across the
 globe for grading purposes. This project suggests
 an accurate and cost efficient system for the
 evaluation of the OMR sheet. Based on the image
@@ -98,7 +98,8 @@ The result gets stored in a CSV file which examiner can refer to later on.
         {% include figure.html path="assets/img/result.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-𝙎𝙪𝙢𝙢𝙖𝙧𝙮
+
+<h3> Summary </h3>
 
 1. The OMR Evaluator system can greatly benefit organizations and individuals who still rely on paper-based methods for data collection, such as surveys, feedback forms, and multiple-choice tests. Its versatility makes it particularly useful in remote areas like villages, as well as educational institutions for faculty feedback evaluation and MCQ answer-sheet evaluations.
 
