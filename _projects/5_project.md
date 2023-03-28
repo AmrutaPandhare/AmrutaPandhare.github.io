@@ -39,11 +39,11 @@ for computation purpose.
     --- -->
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/gui.jpg" title="GUI" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/gui.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    The main GUI was divided into two parts, **left** to evaluate one test at a time and **right** to evaluate multiple tests at once.
+<div class="caption" font-weight="bold">
+    The main GUI was divided into two parts, left to evaluate one test at a time and right to evaluate multiple tests at once.
 </div>
 
 <div class="row justify-content-sm-center">
@@ -97,5 +97,6 @@ The result gets stored in a CSV file which examiner can refer to later on.
         {% include figure.html path="assets/img/result.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
+<h1> Summary </h1>
+fhdjhf
 
