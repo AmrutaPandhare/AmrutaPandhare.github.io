@@ -75,6 +75,36 @@
       items:
         - An interesting and thought provoking course on how self reflective meditation can help achieve life’s goals such as peace and contentment.
         
+- title: Expertised Areas
+  type: list
+  contents:
+    - Incident Response
+    - Ethical Hacking
+    - AWS (Amazon Web Services)
+    - Kali Linux
+    - Computer Network
+    - Threat Intel
+    - Python
+    
+- title: Used Tools
+  type: list
+  contents:
+    - Nessus
+    - BurpSuite
+    - Wireshark
+    - Metasploit
+    - Nmap  
+    - Nikto, dirb, Hydra, etc.
+    
+ - title: Skills and Proficiencies
+   type: list
+   contents:
+    - Team management
+    - Strategic and Proactive at work
+    - Excellent communication skills
+    - Very organized and disciplined
+    - Always striving to learn things
+    
 - title: Other Interests
   type: list
   contents:
