@@ -43,19 +43,19 @@ for computation purpose.
     </div>
 </div>
 <div class="caption">
-    The main GUI was divided into two parts, *left* to evaluate one test at a time and *right* to evaluate multiple tests at once.
+    The main GUI was divided into two parts, **left** to evaluate one test at a time and **right** to evaluate multiple tests at once.
 </div>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/helpmenuforscanningonesheet.jpg" title="helpmenuforscanningonesheet" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
+    <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.html path="assets/img/helpmenuforscanninganentirefolder.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    We provided *Help* menu for effective user interaction.
+    We provided **Help** menu for effective user interaction.
 </div>
 
 {% raw %}
