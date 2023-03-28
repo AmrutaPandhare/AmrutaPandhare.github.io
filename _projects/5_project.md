@@ -7,9 +7,15 @@ importance: 3
 category: study
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+OMR sheets have been widely used across the
+globe for grading purposes. This project suggests
+an accurate and cost efficient system for the
+evaluation of the OMR sheet. Based on the image
+and answers provided by the user the system
+successfully calculates the results and stores the
+result in a CSV file. The user can scan one sheet
+at a time or can scan the entire folder according
+to his/her needs
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
