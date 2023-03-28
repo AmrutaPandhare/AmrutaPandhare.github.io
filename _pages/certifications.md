@@ -9,7 +9,7 @@ display_categories: [study, fun]
 horizontal: false
 ---
 
-<!-- pages/teaching.md -->
+<!-- pages/certifications.md -->
 <div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
