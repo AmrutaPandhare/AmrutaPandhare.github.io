@@ -2,7 +2,7 @@
 layout: page
 title: OMR Evaluator
 description: Image Processing
-img: assets/img/Python.jpg
+img: assets/img/Python.png
 importance: 3
 category: study
 ---
