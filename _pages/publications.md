@@ -61,7 +61,7 @@ nav_order: 5
   <h3>Certified AppSec Practitioner (CAP) — The SecOps Group</h3>
   <p>Certified Appsec Practitioner (CAP) is an intermediate-level exam to test attendees’ knowledge on the core concepts of application security.</p>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8">
       <div class="thumbnail">
         <a href="https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXRfPcv0iNwxiQ4Y+uSQaN+/UtNjvE9ncLn/qZ+TuefnRtFaHY/pf8u2xYHEksp94ZSlHC17inn5t28SZwstUIJU=" target="_blank">
           <img src="/assets/img/cap.jpg" alt="Lights" style="width:100%">
@@ -76,7 +76,7 @@ nav_order: 5
   <h3>Introduction to Network Analysis — Security Blue Team</h3>
   <p>This course covered understanding of basic networking fundamentals and the skills to analyze malicious traffic from a mock compromised system PCAPS using Wireshark and TCPDump.</p>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8">
       <div class="thumbnail">
         <a href="https://elearning.securityblue.team/home/certificate/403722076" target="_blank">
           <img src="/assets/img/network.jpg" alt="Lights" style="width:100%">
