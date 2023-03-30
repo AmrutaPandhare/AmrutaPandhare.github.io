@@ -87,6 +87,21 @@ nav_order: 5
       </div>
     </div>
     
+  <p>_________________________________________________________________________________________________________________</p>
+  <h3>Introduction to Dark Web, Anonymity, and Cryptocurrency - EC Counsil</h3>
+  <p>This course covered how to access dark web and information safely with being anonymous to everyone and how to effectively use Tor Browser and Proxychain.</p>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="thumbnail">
+        <a href="https://eccommonstorage.blob.core.windows.net/codered/certificates/212237db-29b3-42a8-9b20-4cb376f355eb.png" target="_blank">
+          <img src="/assets/img/darkweb.png" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Introduction to Dark Web, Anonymity, and Cryptocurrency</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
     
     
     
