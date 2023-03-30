@@ -15,7 +15,7 @@ nav_order: 5
   {% bibliography -f papers -q @*[year={{y}}]* %}
 {% endfor %} -->
   
-<div class="row">
+<!-- <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/whenallquestionsaremarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -31,6 +31,8 @@ nav_order: 5
 </div>
 <div class="caption">
     1. All questions are marked 2. Few questions are left unmarked 3. Half circle is marked 4. Two options are marked.
-</div> 
+</div>  -->
 
+[![A mushroom-head robot](/assets/imag/whenallquestionsaremarked.jpg 'Codey the Codecademy mascot')](https://eccommonstorage.blob.core.windows.net/codered/certificates/212237db-29b3-42a8-9b20-4cb376f355eb.png)  
+  
 </div>
