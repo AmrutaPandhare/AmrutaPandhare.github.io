@@ -7,28 +7,11 @@ importance: 3
 category: study
 ---
 
-𝐎ptical Mark Recognition (OMR) sheets have been widely used across the
-globe for grading purposes. This project suggests
-an accurate and cost efficient system for the
-evaluation of the OMR sheet. Based on the image
-and answers provided by the user the system
-successfully calculates the results and stores the
-result in a CSV file. The user can scan one sheet
-at a time or can scan the entire folder according
-to his/her needs
+𝐎ptical Mark Recognition (OMR) sheets are commonly used for grading purposes worldwide. This project offers a precise and cost-effective system for evaluating OMR sheets. The system accurately calculates the results and stores them in a CSV file based on the image and answers provided by the user. The user can choose to scan one sheet at a time or an entire folder as per their requirement.
 
-OMR is generally used as direct input for data of censuses and surveys and is perfect for discrete
-data handling, whose values are limited set. In the field of education widely uses OMR technique
-can process objective questions in exams, as Scholastic Aptitude Test-SAT, Graduate Record
-Examination-GRE. However, there are a few drawbacks limiting the application of OMR
-technology.
-Earlier OCR used an optical scanner to scan the paper as bitmap image and the software was used
-to realize the texts and the images. These OCRs matched these input images with the stored bitmap
-images which resulted in inaccuracy due to its hit-and-miss pattern recognition
+OMR is a popular method for inputting data for censuses and surveys, especially for handling discrete data with limited values. In education, OMR is widely used to process objective questions in exams such as the Scholastic Aptitude Test-SAT and Graduate Record Examination-GRE. However, OMR has some limitations that restrict its applications. In the past, optical scanners were used to scan the paper as a bitmap image, and software was used to recognize the texts and images. This OCR method resulted in inaccuracies due to hit-and-miss pattern recognition when matching input images with stored bitmap images.
 
-This system eliminate the installation of heavy machinery, and expensive scanners in return saving
-time and cost. The proposed work consist of an ordinary webcam, and a computer/laptop
-for computation purpose.
+This system eliminates the need for heavy machinery and expensive scanners, thus saving time and cost. The proposed method involves an ordinary webcam and a computer/laptop for computation purposes.
 
 <!-- 
     ---
