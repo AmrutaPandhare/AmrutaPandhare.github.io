@@ -3,7 +3,6 @@ layout: page
 permalink: /certifications/
 title: Certifications
 description: Here are all the certifications I have done so far.
-<p>___________________________________________________________________________________________________________________________________________</p>
 #years: [1967, 1956, 1950, 1935, 1905]
 nav: true
 nav_order: 5
@@ -12,6 +11,7 @@ nav_order: 5
 <div class="publications">
   
 <div class="container">
+  <p>___________________________________________________________________________________________________________________________________________</p>
   <h3>Try Hack Me</h3>
   <p>I've been utilizing the Try Hack Me platform extensively to enhance my skills and knowledge, and as a result, I've earned a significant number of badges and certifications by finishing various rooms. Below are a few examples of the badges and certifications I've earned.</p>
   <div class="row">
