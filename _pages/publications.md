@@ -126,7 +126,9 @@ nav_order: 5
         </a>
       </div>
     </div>
+    
   <p>_________________________________________________________________________________________________________________</p>
+  <p>    </p>
   <h3>Others</h3>
   <p>These are the certifications I have done for fun and to learn something new.</p>
   <div class="row">
