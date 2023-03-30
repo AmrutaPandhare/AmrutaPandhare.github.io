@@ -58,16 +58,16 @@ Say you wanted to write a little bit about your project before you posted the re
 You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images. -->
 
 <div class="row">
-    <div class="col-sm mt-4 mt-md-0">
+    <div class="col-sm mt-6 mt-md-0">
         {% include figure.html path="assets/img/whenallquestionsaremarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-4 mt-md-0">
+    <div class="col-sm mt-6 mt-md-0">
         {% include figure.html path="assets/img/whenfewquestionsareleftunmarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-4 mt-md-0">
+    <div class="col-sm mt-6 mt-md-0">
         {% include figure.html path="assets/img/whenhalfoptionismaked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-4 mt-md-0">
+    <div class="col-sm mt-6 mt-md-0">
         {% include figure.html path="assets/img/whentwooptionsaremarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
