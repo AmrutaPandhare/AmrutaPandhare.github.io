@@ -64,6 +64,12 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
     <div class="col-sm mt-6 mt-md-0">
         {% include figure.html path="assets/img/whenfewquestionsareleftunmarked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+<div class="caption">
+    1. All questions are marked 2. Few questions are left unmarked
+</div>
+
+<div class="row">
     <div class="col-sm mt-6 mt-md-0">
         {% include figure.html path="assets/img/whenhalfoptionismaked.jpg" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -72,8 +78,10 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
     </div>
 </div>
 <div class="caption">
-    1. All questions are marked 2. Few questions are left unmarked 3. Half circle is marked 4. Two options are marked.
+    3. Half circle is marked 4. Two options are marked.
 </div>
+
+
 
 The result gets stored in a CSV file which examiner can refer to later on. 
 <div class="row">
