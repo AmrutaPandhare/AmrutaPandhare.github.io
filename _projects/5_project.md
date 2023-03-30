@@ -66,7 +66,7 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
     </div>
 </div>
 <div class="caption">
-    1. All questions are marked 2. Few questions are left unmarked
+    1. All questions are marked        2. Few questions are left unmarked
 </div>
 
 <div class="row">
@@ -78,7 +78,7 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
     </div>
 </div>
 <div class="caption">
-    3. Half circle is marked 4. Two options are marked.
+    3. Half circle is marked            4. Two options are marked.
 </div>
 
 
