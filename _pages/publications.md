@@ -13,12 +13,11 @@ nav_order: 5
 <div class="container">
   <h3>Try Hack Me</h3>
   <p>I've been utilizing the Try Hack Me platform extensively to enhance my skills and knowledge, and as a result, I've earned a significant number of badges and certifications by finishing various rooms. Below are a few examples of the badges and certifications I've earned.</p>
-  <p>Click on the images to enlarge them.</p>
   <div class="row">
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="https://tryhackme.com/pandhareamruta23/badges/owasp-10" target="_blank">
-          <img src="https://tryhackme.com/pandhareamruta23/badges/owasp-10" alt="Lights" style="width:100%">
+          <img src="assets/img/OWASP.png" alt="Lights" style="width:100%">
           <div class="caption">
             <p>OWASP Top 10</p>
           </div>
