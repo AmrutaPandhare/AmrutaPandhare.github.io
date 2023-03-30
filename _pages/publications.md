@@ -76,7 +76,7 @@ nav_order: 5
   <h3>Introduction to Network Analysis — Security Blue Team</h3>
   <p>This course covered understanding of basic networking fundamentals and the skills to analyze malicious traffic from a mock compromised system PCAPS using Wireshark and TCPDump.</p>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-10">
       <div class="thumbnail">
         <a href="https://elearning.securityblue.team/home/certificate/403722076" target="_blank">
           <img src="/assets/img/network.jpg" alt="Lights" style="width:100%">
