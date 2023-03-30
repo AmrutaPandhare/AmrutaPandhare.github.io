@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 permalink: /certifications/
 title: Certifications
@@ -16,3 +16,4 @@ nav_order: 5
 {% endfor %}
 
 </div>
+ -->
