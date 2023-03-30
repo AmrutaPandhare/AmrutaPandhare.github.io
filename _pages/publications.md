@@ -18,7 +18,7 @@ nav_order: 5
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="https://tryhackme.com/pandhareamruta23/badges/owasp-10" target="_blank">
-          <img src="assets/img/OWASP.png" alt="Lights" style="width:100%">
+          <img src="assets/img/owasp.png" alt="Lights" style="width:100%">
           <div class="caption">
             <p>OWASP Top 10</p>
           </div>
@@ -27,7 +27,7 @@ nav_order: 5
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="https://eccommonstorage.blob.core.windows.net/codered/certificates/212237db-29b3-42a8-9b20-4cb376f355eb.png" target="_blank">
+        <a href="https://tryhackme.com/pandhareamruta23/badges/burped" target="_blank">
           <img src="/assets/img/Burp.png" alt="Lights" style="width:100%">
           <div class="caption">
             <p>BurpSuite</p>
@@ -37,8 +37,8 @@ nav_order: 5
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <a href="https://eccommonstorage.blob.core.windows.net/codered/certificates/212237db-29b3-42a8-9b20-4cb376f355eb.png" target="_blank">
-          <img src="/assets/img/whenallquestionsaremarked.jpg" alt="Lights" style="width:100%">
+        <a href="https://tryhackme.com/pandhareamruta23/badges/adventofcyber4" target="_blank">
+          <img src="/assets/advent.png" alt="Lights" style="width:100%">
           <div class="caption">
             <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
           </div>
