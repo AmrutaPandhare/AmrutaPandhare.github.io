@@ -46,7 +46,7 @@ nav_order: 5
       </div>
     </div>
     
-    <div class="col-md-8">
+    <div class="col-md-12">
       <div class="thumbnail">
         <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-VVNJ32Z23W.png" target="_blank">
           <img src="/assets/img/web.png" alt="Lights" style="width:100%">
