@@ -18,7 +18,7 @@ nav_order: 5
     <div class="col-md-4">
       <div class="thumbnail">
         <a href="https://tryhackme.com/pandhareamruta23/badges/owasp-10" target="_blank">
-          <img src="assets/img/owasp.png" alt="Lights" style="width:100%">
+          <img src="/assets/img/owasp.png" alt="Lights" style="width:100%">
           <div class="caption">
             <p>OWASP Top 10</p>
           </div>
@@ -40,7 +40,7 @@ nav_order: 5
         <a href="https://tryhackme.com/pandhareamruta23/badges/adventofcyber4" target="_blank">
           <img src="/assets/advent.png" alt="Lights" style="width:100%">
           <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+            <p>Advent of Cyber 4</p>
           </div>
         </a>
       </div>
