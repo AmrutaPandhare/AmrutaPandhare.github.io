@@ -102,22 +102,55 @@ nav_order: 5
       </div>
     </div>
     
+  <p>_________________________________________________________________________________________________________________</p>
+  <h3>Python</h3>
+  <p>These courses introduced the basics of Python like variables, functions, loops and the core data structures like Strings, Files, Lists, Dictionaries, Tuples, etc.</p>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="thumbnail">
+        <a href="https://www.coursera.org/account/accomplishments/certificate/9RZUECD6NB8N" target="_blank">
+          <img src="/assets/img/python.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Programming for everybody(Getting started withPython)</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="thumbnail">
+        <a href="https://www.coursera.org/account/accomplishments/certificate/TRXXWAYSUU6A" target="_blank">
+          <img src="/assets/img/pythonds.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Python Data Structure</p>
+          </div>
+        </a>
+      </div>
+    </div>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  <p>_________________________________________________________________________________________________________________</p>
+  <h3>Others</h3>
+  <p>These are the certifications I have done for fun and to learn something new.</p>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="thumbnail">
+        <a href="https://www.coursera.org/account/accomplishments/certificate/YHCSAECRSJSE" target="_blank">
+          <img src="/assets/img/korean.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>First Step Korean</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="thumbnail">
+        <a href="https://www.coursera.org/account/accomplishments/certificate/ME89EMUMXXAJ" target="_blank">
+          <img src="/assets/img/medi.jpg" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>Meditation: A way to achieve your goals in your life</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  <p>_________________________________________________________________________________________________________________</p>
   </div>
 </div>
