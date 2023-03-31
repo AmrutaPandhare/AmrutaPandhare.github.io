@@ -3,7 +3,7 @@ layout: page
 permalink: /certifications/
 title: Certifications
 description: Here are all the certifications I have done so far.
-#years: [1967, 1956, 1950, 1935, 1905]
+
 nav: true
 nav_order: 5
 ---
