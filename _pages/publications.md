@@ -129,7 +129,6 @@ nav_order: 5
    
   <p>____________________________________________________________________________________________________________________________</p>
   <h3>Other</h3>
-  <p>These are the certifications I have done for fun and to learn something new.</p>
   <div class="row">
     <div class="col-md-5">
       <div class="thumbnail">
