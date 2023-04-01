@@ -6,7 +6,7 @@ subtitle: Security Operations Center (SOC) Analyst || Cyber Security Analyst || 
 
 profile:
   align: right
-  image: about.jpg
+  image: about2.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>📍Location : Mumbai</p>
