@@ -1,452 +1,90 @@
-<!DOCTYPE html>
-<!-- _layouts/distill.html --><html>
-  <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
-    
-
-    <!-- Standard metadata -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Opsgenie | Amruta Pandhare  </title>
-    <meta name="author" content="Amruta Pandhare  ">
-    <meta name="description" content="A Comprehensive Incident Management Tool for Streamlined Operations">
-    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
-
-
-    <!-- Bootstrap & MDB -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
-
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
-
-    <!-- Code Syntax Highlighting -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
-
-    <!-- Styles -->
-    
-    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%92%AB&lt;/text&gt;&lt;/svg&gt;">
-    
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://amrutapandhare.github.io/blog/2023/opsgenie/">
-    
-    <!-- Dark Mode -->
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
-
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/dark_mode.js"></script>
-    
-
-
-    <!-- jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <!-- MathJax -->
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        tags: 'ams'
-      }
-    };
-  </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
-    <!-- Distill js -->
-    <script src="/assets/js/distillpub/template.v2.js"></script>
-    <script src="/assets/js/distillpub/transforms.v2.js"></script>
-    <script src="/assets/js/distillpub/overrides.js"></script>
-    
-  </head>
-
-  <body>
-<d-front-matter>
-    <script async type="text/json">{
-      "title": "Opsgenie",
-      "description": "A Comprehensive Incident Management Tool for Streamlined Operations",
-      "published": "April 1, 2023",
-      "authors": [
-        {
-          "author": "Amruta Pandhare",
-          "authorURL": "",
-          "affiliations": [
-            {
-              "name": "Atlassian",
-              "url": ""
-            }
-          ]
-        }
-        
-      ],
-      "katex": {
-        "delimiters": [
-          {
-            "left": "$",
-            "right": "$",
-            "display": false
-          },
-          {
-            "left": "$$",
-            "right": "$$",
-            "display": true
-          }
-        ]
-      }
-    }</script>
-  </d-front-matter>
-
-  
-
-    <!-- Header -->
-    <header>
-
-      <!-- Nav Bar -->
-      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
-        <div class="container">
-          <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Amruta Pandhare </span></a>
-          <!-- Navbar Toggle -->
-          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar top-bar"></span>
-            <span class="icon-bar middle-bar"></span>
-            <span class="icon-bar bottom-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse text-right" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
-
-              <!-- About -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/">About Me</a>
-              </li>
-              
-              <!-- Blog -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/blog/">Blogs<span class="sr-only">(current)</span></a>
-              </li>
-
-              <!-- Other pages -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/activities/">Activities</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/resume/">Resume</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/certifications/">Certifications</a>
-              </li>
-
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Scrolling Progress Bar -->
-      <progress id="progress" value="0">
-        <div class="progress-container">
-          <span class="progress-bar"></span>
-        </div>
-      </progress>
-    </header>
-
-
-    <!-- Content -->
-    <div class="post distill">
-
-      <d-title>
-        <h1>Opsgenie</h1>
-        <p>A Comprehensive Incident Management Tool for Streamlined Operations</p>
-      </d-title>
-
-      <d-byline></d-byline>
-
-      <d-article>
-        <d-contents>
-          <nav class="l-text figcaption">
-          <h3>Contents</h3>
-            <div><a href="#overview">Overview</a></div>
-            <div><a href="#about">About</a></div>
-            <div><a href="#features">Features</a></div>
-            <div><a href="#use-cases">Use Cases</a></div>
-            <div><a href="#pros-cons">Pros-Cons</a></div>
-            <div><a href="#conclusion">Conclusion</a></div>
-            <div><a href="#references">References</a></div>
-            
-          </nav>
-        </d-contents>
-
-        <h2 id="overview">Overview</h2>
-
-<p>Opsgenie is a modern incident management tool that helps organizations to quickly detect, diagnose, and resolve incidents. It is designed to provide a centralized platform that allows teams to collaborate effectively, streamline their incident response processes, and reduce downtime.</p>
-
-<p>Opsgenie was acquired by Atlassian in 2018 and is now part of the Atlassian family of products. This acquisition has strengthened Atlassian’s offering in the IT service management space and has made Opsgenie one of the leading incident management tools on the market.</p>
-
-<p>In this blog post, I will provide an in-depth examination of Opsgenie, exploring its uses, features, advantages, and disadvantages.</p>
-
-<hr>
-<h2 id="about">About</h2>
-
-<p>Opsgenie is a cloud-based incident management platform that helps teams respond to alerts and incidents quickly and efficiently. It offers a wide range of features such as alerting, on-call scheduling, incident management, and collaboration tools.</p>
-
-<p>Opsgenie works by receiving alerts from various sources such as monitoring tools, cloud services, and other applications. These alerts can be customized based on severity, priority, and other criteria. Once an alert is received, Opsgenie can notify the appropriate team members via various communication channels such as email, SMS, voice call, or mobile push notification.</p>
-
-<p>It also offers on-call scheduling, which helps teams manage their on-call rotations and ensure that the right person is notified in case of an incident. Additionally, it provides incident management capabilities such as incident response workflows, collaboration tools, and reporting and analytics.</p>
-
-<p>Overall, Opsgenie streamlines the incident management process and helps teams resolve incidents quickly and efficiently, improving overall uptime and reducing the impact of downtime on business operations.</p>
-
-<hr>
-<h2 id="features">Features</h2>
-
-<p>Opsgenie has a wide range of features that make it a powerful incident management tool. Here are some of the most notable features:</p>
-
-<p><strong>Alert Management</strong>: Opsgenie provides a centralized platform for managing alerts from different sources, such as monitoring tools, cloud providers, and other third-party applications. It allows teams to customize their alert routing rules, prioritize alerts based on their severity, and set up escalation policies to ensure that alerts are responded to in a timely manner.</p>
-
-<p><strong>Incident Management</strong>: Opsgenie provides a streamlined incident management workflow that allows teams to quickly detect, diagnose, and resolve incidents. It provides a centralized platform for collaboration, communication, and coordination, and allows teams to track the status of incidents in real-time.</p>
-
-<p><strong>Automation</strong>: Opsgenie allows teams to automate their incident response processes using integrations and APIs. This allows teams to reduce manual effort, improve the speed and accuracy of their incident response, and ensure that incidents are resolved quickly.</p>
-
-<p><strong>Reporting and Analytics</strong>: Opsgenie provides a range of reporting and analytics features that allow teams to measure the effectiveness of their incident management processes. Teams can track metrics such as mean time to acknowledge (MTTA), mean time to resolution (MTTR), incident frequency, and incident resolution time, and use this data to continuously improve their incident response processes.</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/dashboard-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/dashboard-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/dashboard-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/dashboard.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/dashboard2-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/dashboard2-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/dashboard2-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/dashboard2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-
-<p><strong>Mobile App</strong>: Opsgenie provides a mobile app that allows teams to manage incidents, alerts, and outages from anywhere. The mobile app provides real-time push notifications, allows teams to collaborate and communicate on-the-go, and ensures that teams can respond to incidents quickly, even when they are away from their desks.</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/dashboard3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/dashboard3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/dashboard3-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/dashboard3.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-
-<hr>
-<h2 id="use-cases">Use Cases</h2>
-
-<p>Opsgenie can be used in a variety of use cases, some of which are:</p>
-
-<p><strong>IT Infrastructure Monitoring</strong>: Opsgenie can receive alerts from various monitoring tools and help teams respond to incidents quickly. It can also provide real-time dashboards and reports for better visibility into the health of the IT infrastructure.</p>
-
-<p><strong>DevOps</strong>: Opsgenie can be used to manage incidents in DevOps workflows, helping teams detect and resolve issues early in the development cycle. It can also integrate with various DevOps tools to automate incident management and streamline workflows.</p>
-
-<p><strong>Cloud Services Monitoring</strong>: Opsgenie can monitor cloud services such as AWS, Azure, and Google Cloud, and notify the appropriate team members in case of an incident. It can also provide real-time dashboards and reports for better visibility into the health of the cloud environment.</p>
-
-<p><strong>Security</strong>: Opsgenie can be used to manage security incidents such as data breaches, network intrusions, and malware attacks. It can help teams respond to incidents quickly and efficiently, reducing the impact of security breaches.</p>
-
-<p><strong>Business Continuity</strong>: Opsgenie can be used to ensure business continuity by monitoring critical systems and applications and alerting the appropriate team members in case of an incident. It can also provide real-time dashboards and reports for better visibility into the health of the business operations.</p>
-
-<hr>
-<h2 id="pros-cons">Pros-Cons</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Pros</th>
-      <th style="text-align: center">Cons</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-<strong>Powerful Incident Management Capabilities</strong>: Opsgenie offers robust incident management capabilities, including real-time alerting, on-call scheduling, incident response workflows, and collaboration tools, which can help teams respond to incidents quickly and efficiently.</td>
-      <td style="text-align: center">
-<strong>Complexity</strong>: Opsgenie can be complex to set up and configure, requiring significant expertise and effort to customize and integrate with third-party tools.</td>
-    </tr>
-    <tr>
-      <td>
-<strong>Integration with Third-Party Tools</strong>: Opsgenie integrates with a wide range of third-party tools such as monitoring tools, DevOps tools, and cloud services, enabling teams to automate incident management and streamline workflows.</td>
-      <td style="text-align: center">
-<strong>Cost</strong>: Opsgenie can be expensive, especially for small and medium-sized businesses, with pricing based on the number of users and the level of functionality required.</td>
-    </tr>
-    <tr>
-      <td>
-<strong>Customization and Flexibility</strong>: Opsgenie offers extensive customization options, allowing teams to tailor their incident management processes to their specific needs. It also offers flexibility in terms of deployment options, including cloud-based, on-premises, and hybrid deployments.</td>
-      <td style="text-align: center">
-<strong>Learning Curve</strong>: Opsgenie has a steep learning curve, requiring training and onboarding for new users to become proficient in using the platform.</td>
-    </tr>
-    <tr>
-      <td>
-<strong>Advanced Reporting and Analytics</strong>: Opsgenie provides advanced reporting and analytics capabilities, including real-time dashboards, incident reports, and trend analysis, enabling teams to gain insights into their incident management processes and make data-driven decisions.</td>
-      <td style="text-align: center">
-<strong>Reliance on Third-Party Integrations</strong>: Opsgenie relies heavily on integrations with third-party tools, and issues with these integrations can cause problems with incident management workflows.</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr>
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Opsgenie is a powerful incident management tool that is used by organizations of all sizes and industries. Its use cases span IT operations, DevOps, security operations, and business operations, and its features include alert management, incident management, automation, reporting and analytics, and a mobile app. If you’re looking to improve your incident response processes, Opsgenie is definitely worth considering.</p>
-
-<hr>
-<h2 id="references">References</h2>
-
-<ol>
-  <li><a href="https://support.atlassian.com/opsgenie/resources/" rel="external nofollow noopener" target="_blank">https://support.atlassian.com/opsgenie/resources/</a></li>
-  <li><a href="https://blog.deiser.com/en/what-is-opsgenie-used-for" rel="external nofollow noopener" target="_blank">https://blog.deiser.com/en/what-is-opsgenie-used-for</a></li>
-</ol>
-
-      </d-article>
-
-      <d-appendix>
-        <d-footnote-list></d-footnote-list>
-        <d-citation-list></d-citation-list>
-      </d-appendix>
-
-      <d-bibliography src="/assets/bibliography/"></d-bibliography>
-</div>
-
-    <!-- Footer -->    
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        © Copyright 2023 Amruta Pandhare  . 
-      </div>
-    </footer>
-
-    <!-- Bootsrap & MDB scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
-
-    
-    
-
-<!-- Scrolling Progress Bar -->
-<script type="text/javascript">
-  /*
-   * This JavaScript code has been adapted from the article 
-   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
-   * published on the website https://css-tricks.com on the 7th of May, 2014.
-   * Couple of changes were made to the original code to make it compatible 
-   * with the `al-foio` theme.
-   */
-  const progressBar = $("#progress");
-  /*
-   * We set up the bar after all elements are done loading.
-   * In some cases, if the images in the page are larger than the intended
-   * size they'll have on the page, they'll be resized via CSS to accomodate
-   * the desired size. This mistake, however, breaks the computations as the
-   * scroll size is computed as soon as the elements finish loading.
-   * To account for this, a minimal delay was introduced before computing the
-   * values.
-   */
-  window.onload = function () {
-    setTimeout(progressBarSetup, 50);
-  };
-  /*
-   * We set up the bar according to the browser.
-   * If the browser supports the progress element we use that.
-   * Otherwise, we resize the bar thru CSS styling
-   */
-  function progressBarSetup() {
-    if ("max" in document.createElement("progress")) {
-      initializeProgressElement();
-      $(document).on("scroll", function() {
-        progressBar.attr({ value: getCurrentScrollPosition() });
-      });
-      $(window).on("resize", initializeProgressElement);
-    } else {
-      resizeProgressBar();
-      $(document).on("scroll", resizeProgressBar);
-      $(window).on("resize", resizeProgressBar);
-    }
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!-- ---
+layout: distill
+title: Opsgenie
+description: A Comprehensive Incident Management Tool for Streamlined Operations
+giscus_comments: false
+date: 2023-05-22
+
+authors:
+  - name: Amruta Pandhare
+    affiliations:
+      name: Atlassian
+
+# Optionally, you can add a table of contents to your post.
+# NOTES:
+#   - make sure that TOC names match the actual section names
+#     for hyperlinks within the post to work correctly.
+#   - we may want to automate TOC generation in the future using
+#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
+toc:
+  - name: Equations
+    # if a section has subsections, you can add them as follows:
+    # subsections:
+    #   - name: Example Child Subsection 1
+    #   - name: Example Child Subsection 2
+  - name: Citations
+  - name: Footnotes
+  - name: Code Blocks
+  - name: Interactive Plots
+  - name: Layouts
+  - name: Other Typography?
+
+# Below is an example of injecting additional post-specific styles.
+# If you use this post as a template, delete this _styles block.
+_styles: >
+  .fake-img {
+    background: #bbb;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
   }
-  /*
-   * The vertical scroll position is the same as the number of pixels that
-   * are hidden from view above the scrollable area. Thus, a value > 0 is
-   * how much the user has scrolled from the top
-   */
-  function getCurrentScrollPosition() {
-    return $(window).scrollTop();
+  .fake-img p {
+    font-family: monospace;
+    color: white;
+    text-align: left;
+    margin: 12px 0;
+    text-align: center;
+    font-size: 16px;
   }
 
-  function initializeProgressElement() {
-    let navbarHeight = $("#navbar").outerHeight(true);
-    $("body").css({ "padding-top": navbarHeight });
-    $("progress-container").css({ "padding-top": navbarHeight });
-    progressBar.css({ top: navbarHeight });
-    progressBar.attr({
-      max: getDistanceToScroll(),
-      value: getCurrentScrollPosition(),
-    });
-  }
-  /*
-   * The offset between the html document height and the browser viewport
-   * height will be greater than zero if vertical scroll is possible.
-   * This is the distance the user can scroll
-   */
-  function getDistanceToScroll() {
-    return $(document).height() - $(window).height();
-  }
+---
 
-  function resizeProgressBar() {
-    progressBar.css({ width: getWidthPercentage() + "%" });
-  }
-  // The scroll ratio equals the percentage to resize the bar
-  function getWidthPercentage() {
-    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
-  }
-</script>
+## Equations
 
-  
-</body>
-</html>
+This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
+You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
+If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
+
+To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
+Here is an example:
+
+$$
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+$$
+
+Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html) that brought a significant improvement to the loading and rendering speed, which is now [on par with KaTeX](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
+
+***
+
+## Citations
+
+Citations are then used in the article body with the `<d-cite>` tag.
+The key attribute is a reference to the id provided in the bibliography.
+The key attribute can take multiple ids, separated by commas.
+
+The citation is presented inline like this: <d-cite key="gregor2015draw"></d-cite> (a number that displays more information on hover).
+If you have an appendix, a bibliography is automatically created and populated in it.
+
+Distill chose a numerical inline citation style to improve readability of citation dense articles and because many of the benefits of longer citations are obviated by displaying more information on hover.
+However, we consider it good style to mention author last names if you discuss something at length and it fits into the flow well — the authors are human and it’s nice for them to have the community associate them with their work.
+
+***
+
+## Footnotes
+
+Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
+The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
+
+***
+ -->
