@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Pico CTF
-description: Gym Score 595
+description: Gym Score 2515
 img: assets/img/picoctf.png
 redirect: https://play.picoctf.org/users/Amruta23
 importance: 2
