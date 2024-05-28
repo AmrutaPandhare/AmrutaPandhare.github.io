@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://amrutapandhare.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://amrutapandhare.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-05-28T19:30:56+00:00</updated><id>https://amrutapandhare.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://amrutapandhare.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://amrutapandhare.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-05-28T19:33:52+00:00</updated><id>https://amrutapandhare.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">Tenable</title><link href="https://amrutapandhare.github.io/blog/2023/tenableAPI/" rel="alternate" type="text/html" title="Tenable" /><published>2023-04-01T22:01:00+00:00</published><updated>2023-04-01T22:01:00+00:00</updated><id>https://amrutapandhare.github.io/blog/2023/tenableAPI</id><content type="html" xml:base="https://amrutapandhare.github.io/blog/2023/tenableAPI/"><![CDATA[<h2 id="about">About</h2>
 
 <p>Managing Tenable scans programmatically can save time and effort, especially when dealing with multiple scans. This blog will guide you through a Python script that leverages the Tenable API to download specific scans, save them in CSV format, and convert the CSV files to JSON. We’ll explain each part of the script so you can understand and modify it as needed.</p>
@@ -20,8 +20,6 @@
 <h2 id="script">Script</h2>
 
 <p>Here’s the full script with comments explaining each part:</p>
-
-<h1 id="python-script-for-fetching-and-processing-tenable-scans">Python Script for Fetching and Processing Tenable Scans</h1>
 
 <p>```python
 import requests
@@ -116,7 +114,8 @@ for scan in scans:
             logging.error(f'Issue with file for {scan_name}: {status}')
 </code></pre></div></div>
 
-<p>print(“Script execution completed.”)</p>
+<p>print(“Script execution completed.”)
+```python</p>
 
 <hr />
 <h2 id="additional-use-cases">Additional Use Cases</h2>
