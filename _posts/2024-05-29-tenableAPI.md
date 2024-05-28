@@ -39,8 +39,6 @@ Before diving into the code, let's outline the main steps the script performs:
 
 Here's the full script with comments explaining each part:
 
-# Python Script for Fetching and Processing Tenable Scans
-
 ```python
 import requests
 import json
@@ -134,6 +132,7 @@ for scan_search in scan_search_list:
                 logging.error(f'Issue with file for {scan_name}: {status}')
 
 print("Script execution completed.")
+```python
 
 ***
 ## Additional Use Cases
