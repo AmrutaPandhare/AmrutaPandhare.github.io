@@ -206,11 +206,7 @@
 
 <p>Here’s the full script with comments explaining each part:</p>
 
-<p><strong>Import Libraries</strong></p>
-
-<p>python
-Copy code
-import requests
+<p>import requests
 import json
 import csv
 import sys
@@ -219,36 +215,32 @@ import pandas as pd
 import logging
 import re</p>
 
-<p><strong>Configure logging</strong></p>
-
+<h1 id="configure-logging">Configure logging</h1>
 <p>logging.basicConfig(filename=’log.txt’, level=logging.INFO, format=’%(asctime)s:%(levelname)s:%(message)s’)</p>
 
-<p><strong>Set Tenable API keys &amp; declare list of scans</strong></p>
-
+<h1 id="set-tenable-api-keys">Set Tenable API keys</h1>
 <p>ACCESS_KEY = ‘YOUR_ACCESS_KEY’
 SECRET_KEY = ‘YOUR_SECRET_KEY’
 scan_search_list = [‘scan1’, ‘scan2’, ‘scan3’]</p>
 
-<p><strong>Set the base URL and headers for the Tenable API &amp; fetch scans</strong></p>
-
+<h1 id="set-the-base-url-and-headers-for-the-tenable-api">Set the base URL and headers for the Tenable API</h1>
 <p>url = ‘https://cloud.tenable.com’
 headers = {‘X-ApiKeys’: f’accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};’}</p>
 
 <p>for scan_search in scan_search_list:
     logging.info(f”Processing scan search: {scan_search}”)</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scans = requests.get(f'{url}/scans', headers=headers).json()['scans']
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Fetching scans
+scans = requests.get(f'{url}/scans', headers=headers).json()['scans']
 for scan in scans:
     if scan_search.lower() in scan['name'].lower() and not scan['name'].endswith('_OLD'):
         scan_id = scan['id']
         scan_name = scan['name']
         uuid = scan.get("uuid", scan.get("wizard_uuid", ""))  # UUID or WIZARD_UUID
         logging.info(f'Found: {scan_name} ({scan_id})')
-</code></pre></div></div>
 
-<p><strong>Request download</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        export_request = {
+        # Request download
+        export_request = {
             'chapters': 'vuln_hosts_summary,vuln_by_host,compliance_exec,remediations,vuln_by_plugin,compliance',
             'filter.search_type': 'and',
             'format': 'csv'
@@ -259,31 +251,25 @@ for scan in scans:
             continue  # Skip to the next scan
 
         file_id = file_request.json()['file']
-</code></pre></div></div>
 
-<p><strong>Monitor until not loading</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        status = 'loading'
+        # Monitor until not loading
+        status = 'loading'
         while status == 'loading':
             time.sleep(1)
             file_status = requests.get(f'{url}/scans/{scan_id}/export/{file_id}/status', headers=headers).json()
             status = file_status['status']
             logging.info(f'Checking status for {scan_name}: {status}')
-</code></pre></div></div>
 
-<p><strong>Download if ready</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if status == 'ready':
+        # Download if ready
+        if status == 'ready':
             file_download = requests.get(f'{url}/scans/{scan_id}/export/{file_id}/download', headers=headers)
             filename = f'{scan_name.replace(" ", "_")}.csv'
             with open(filename, 'wb') as fout:
                 fout.write(file_download.content)
             logging.info(f'Wrote: {filename}')
-</code></pre></div></div>
 
-<p><strong>Convert CSV to JSON</strong></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            selected_columns = ['Host Start', 'Risk', 'CVE', 'Host', 'Name', 'Solution']
+            # Convert CSV to JSON
+            selected_columns = ['Host Start', 'Risk', 'CVE', 'Host', 'Name', 'Solution']
             df = pd.read_csv(filename, usecols=selected_columns)
             df.rename(columns={'Host Start': 'scanStartDate', 'Risk': 'risk', 'CVE': 'cve', 'Host': 'host', 'Name': 'name', 'Solution': 'solution'}, inplace=True)
             
