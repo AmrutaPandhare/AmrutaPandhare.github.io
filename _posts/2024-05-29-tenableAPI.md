@@ -39,6 +39,8 @@ Before diving into the code, let's outline the main steps the script performs:
 
 Here's the full script with comments explaining each part:
 
+**Import Libraries**
+
 python
 Copy code
 import requests
@@ -54,24 +56,20 @@ import re
 
 logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
- **Set Tenable API keys**
+**Set Tenable API keys & declare list of scans**
 
 ACCESS_KEY = 'YOUR_ACCESS_KEY'
-
 SECRET_KEY = 'YOUR_SECRET_KEY'
-
 scan_search_list = ['scan1', 'scan2', 'scan3']
 
-**Set the base URL and headers for the Tenable API**
+**Set the base URL and headers for the Tenable API & fetch scans**
 
 url = 'https://cloud.tenable.com'
-
 headers = {'X-ApiKeys': f'accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};'}
-
-**Fetching scans**
 
 for scan_search in scan_search_list:
     logging.info(f"Processing scan search: {scan_search}")
+
     scans = requests.get(f'{url}/scans', headers=headers).json()['scans']
     for scan in scans:
         if scan_search.lower() in scan['name'].lower() and not scan['name'].endswith('_OLD'):
