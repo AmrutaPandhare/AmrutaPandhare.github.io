@@ -1,7 +1,7 @@
 ---
 layout: distill
-title: Tenable API
-date: 2024-05-29 21:01:00
+title: Tenable
+date: 2024-05-29 22:01:00
 description: Automating Tenable Scan Downloads and Conversions to CSV and JSON with Python
 #categories: sample-posts external-services
 
@@ -27,10 +27,10 @@ Managing Tenable scans programmatically can save time and effort, especially whe
 **Script Overview**
 Before diving into the code, let's outline the main steps the script performs:
 
-***Configure logging and set API keys***: Initialize logging and define your Tenable API keys.
-***Fetch scan data**: Retrieve the list of scans from Tenable.io.
-***Download scans***: Export the scans in CSV format.
-***Save and process scans***: Save the CSV files and convert them to JSON format.
+**Configure logging and set API keys**: Initialize logging and define your Tenable API keys.
+**Fetch scan data**: Retrieve the list of scans from Tenable.io.
+**Download scans**: Export the scans in CSV format.
+**Save and process scans**: Save the CSV files and convert them to JSON format.
 
 ***
 ## Script
@@ -48,15 +48,15 @@ import pandas as pd
 import logging
 import re
 
-# Configure logging
+  # Configure logging
 logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
-# Set Tenable API keys
+  # Set Tenable API keys
 ACCESS_KEY = 'YOUR_ACCESS_KEY'
 SECRET_KEY = 'YOUR_SECRET_KEY'
 scan_search_list = ['scan1', 'scan2', 'scan3']
 
-# Set the base URL and headers for the Tenable API
+  # Set the base URL and headers for the Tenable API
 url = 'https://cloud.tenable.com'
 headers = {'X-ApiKeys': f'accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};'}
 
