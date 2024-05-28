@@ -39,6 +39,9 @@ Before diving into the code, let's outline the main steps the script performs:
 
 Here's the full script with comments explaining each part:
 
+# Python Script for Fetching and Processing Tenable Scans
+
+```python
 import requests
 import json
 import csv
@@ -105,9 +108,9 @@ for scan_search in scan_search_list:
                 selected_columns = ['Host Start', 'Risk', 'CVE', 'Host', 'Name', 'Solution']
                 df = pd.read_csv(filename, usecols=selected_columns)
                 df.rename(columns={'Host Start': 'scanStartDate', 'Risk': 'risk', 'CVE': 'cve', 'Host': 'host', 'Name': 'name', 'Solution': 'solution'}, inplace=True)
-                
+
                 record_date = df['scanStartDate'].iloc[0][:10]
-                
+
                 scan_entries = []
                 for _, row in df.iterrows():
                     entry = {
@@ -119,7 +122,7 @@ for scan_search in scan_search_list:
                         'solution': 'None' if pd.isna(row['solution']) else row['solution']
                     }
                     scan_entries.append(entry)
-                
+
                 additional_info = {"recordDate": record_date, "scanEntries": scan_entries}
                 final_json_data = json.dumps(additional_info) + '\n'
 
