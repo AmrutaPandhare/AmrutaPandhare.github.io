@@ -6,7 +6,7 @@ subtitle: Cyber Security Analyst || Cyber Security Analyst || Incident Response 
 
 profile:
   align: right
-  image: aboutme.jpg
+  image: aboutmeamruta.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>📍Location : Mumbai, India </p>
