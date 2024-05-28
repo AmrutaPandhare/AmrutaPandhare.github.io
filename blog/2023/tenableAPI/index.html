@@ -206,7 +206,10 @@
 
 <p>Here’s the full script with comments explaining each part:</p>
 
-<p>import requests
+<h1 id="python-script-for-fetching-and-processing-tenable-scans">Python Script for Fetching and Processing Tenable Scans</h1>
+
+<p>```python
+import requests
 import json
 import csv
 import sys
@@ -272,9 +275,9 @@ for scan in scans:
             selected_columns = ['Host Start', 'Risk', 'CVE', 'Host', 'Name', 'Solution']
             df = pd.read_csv(filename, usecols=selected_columns)
             df.rename(columns={'Host Start': 'scanStartDate', 'Risk': 'risk', 'CVE': 'cve', 'Host': 'host', 'Name': 'name', 'Solution': 'solution'}, inplace=True)
-            
+
             record_date = df['scanStartDate'].iloc[0][:10]
-            
+
             scan_entries = []
             for _, row in df.iterrows():
                 entry = {
@@ -286,7 +289,7 @@ for scan in scans:
                     'solution': 'None' if pd.isna(row['solution']) else row['solution']
                 }
                 scan_entries.append(entry)
-            
+
             additional_info = {"recordDate": record_date, "scanEntries": scan_entries}
             final_json_data = json.dumps(additional_info) + '\n'
 
