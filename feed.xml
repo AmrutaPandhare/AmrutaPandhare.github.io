@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://amrutapandhare.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://amrutapandhare.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-05-28T19:03:45+00:00</updated><id>https://amrutapandhare.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://amrutapandhare.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://amrutapandhare.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-05-28T19:11:47+00:00</updated><id>https://amrutapandhare.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">Tenable</title><link href="https://amrutapandhare.github.io/blog/2023/tenableAPI/" rel="alternate" type="text/html" title="Tenable" /><published>2023-04-01T22:01:00+00:00</published><updated>2023-04-01T22:01:00+00:00</updated><id>https://amrutapandhare.github.io/blog/2023/tenableAPI</id><content type="html" xml:base="https://amrutapandhare.github.io/blog/2023/tenableAPI/"><![CDATA[<h2 id="about">About</h2>
 
 <p>Managing Tenable scans programmatically can save time and effort, especially when dealing with multiple scans. This blog will guide you through a Python script that leverages the Tenable API to download specific scans, save them in CSV format, and convert the CSV files to JSON. We’ll explain each part of the script so you can understand and modify it as needed.</p>
@@ -6,13 +6,15 @@
 <hr />
 <h2 id="overview">Overview</h2>
 
-<p><strong>Script Overview</strong>
-Before diving into the code, let’s outline the main steps the script performs:</p>
+<p>Before diving into the code, let’s outline the main steps the script performs:</p>
 
-<p><strong>Configure logging and set API keys</strong>: Initialize logging and define your Tenable API keys.
-<strong>Fetch scan data</strong>: Retrieve the list of scans from Tenable.io.
-<strong>Download scans</strong>: Export the scans in CSV format.
-<strong>Save and process scans</strong>: Save the CSV files and convert them to JSON format.</p>
+<p><strong>Configure logging and set API keys</strong>: Initialize logging and define your Tenable API keys.</p>
+
+<p><strong>Fetch scan data</strong>: Retrieve the list of scans from Tenable.io.</p>
+
+<p><strong>Download scans</strong>: Export the scans in CSV format.</p>
+
+<p><strong>Save and process scans</strong>: Save the CSV files and convert them to JSON format.</p>
 
 <hr />
 <h2 id="script">Script</h2>
@@ -30,22 +32,28 @@ import pandas as pd
 import logging
 import re</p>
 
-<p># Configure logging
-logging.basicConfig(filename=’log.txt’, level=logging.INFO, format=’%(asctime)s:%(levelname)s:%(message)s’)</p>
+<p><strong>Configure logging</strong></p>
 
-<p># Set Tenable API keys
-ACCESS_KEY = ‘YOUR_ACCESS_KEY’
-SECRET_KEY = ‘YOUR_SECRET_KEY’
-scan_search_list = [‘scan1’, ‘scan2’, ‘scan3’]</p>
+<p>logging.basicConfig(filename=’log.txt’, level=logging.INFO, format=’%(asctime)s:%(levelname)s:%(message)s’)</p>
 
-<p># Set the base URL and headers for the Tenable API
-url = ‘https://cloud.tenable.com’
-headers = {‘X-ApiKeys’: f’accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};’}</p>
+<p><strong>Set Tenable API keys</strong></p>
+
+<p>ACCESS_KEY = ‘YOUR_ACCESS_KEY’</p>
+
+<p>SECRET_KEY = ‘YOUR_SECRET_KEY’</p>
+
+<p>scan_search_list = [‘scan1’, ‘scan2’, ‘scan3’]</p>
+
+<p><strong>Set the base URL and headers for the Tenable API</strong></p>
+
+<p>url = ‘https://cloud.tenable.com’</p>
+
+<p>headers = {‘X-ApiKeys’: f’accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};’}</p>
+
+<p><strong>Fetching scans</strong></p>
 
 <p>for scan_search in scan_search_list:
-    logging.info(f”Processing scan search: {scan_search}”)</p>
-
-<p># Fetching scans
+    logging.info(f”Processing scan search: {scan_search}”)
     scans = requests.get(f’{url}/scans’, headers=headers).json()[‘scans’]
     for scan in scans:
         if scan_search.lower() in scan[‘name’].lower() and not scan[‘name’].endswith(‘_OLD’):
@@ -54,42 +62,48 @@ headers = {‘X-ApiKeys’: f’accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};�
             uuid = scan.get(“uuid”, scan.get(“wizard_uuid”, “”))  # UUID or WIZARD_UUID
             logging.info(f’Found: {scan_name} ({scan_id})’)</p>
 
-<p># Request download
-            export_request = {
-                ‘chapters’: ‘vuln_hosts_summary,vuln_by_host,compliance_exec,remediations,vuln_by_plugin,compliance’,
-                ‘filter.search_type’: ‘and’,
-                ‘format’: ‘csv’
-            }
-            file_request = requests.post(f’{url}/scans/{scan_id}/export’, headers=headers, json=export_request)
-            if file_request.status_code != 200 or ‘error’ in file_request.json():
-                logging.error(f’Request failed for {scan_name}: {file_request.text}’)
-                continue  # Skip to the next scan</p>
+<p><strong>Request download</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        file_id = file_request.json()['file']
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        export_request = {
+            'chapters': 'vuln_hosts_summary,vuln_by_host,compliance_exec,remediations,vuln_by_plugin,compliance',
+            'filter.search_type': 'and',
+            'format': 'csv'
+        }
+        file_request = requests.post(f'{url}/scans/{scan_id}/export', headers=headers, json=export_request)
+        if file_request.status_code != 200 or 'error' in file_request.json():
+            logging.error(f'Request failed for {scan_name}: {file_request.text}')
+            continue  # Skip to the next scan
+
+        file_id = file_request.json()['file']
 </code></pre></div></div>
 
-<p># Monitor until not loading
-            status = ‘loading’
-            while status == ‘loading’:
-                time.sleep(1)
-                file_status = requests.get(f’{url}/scans/{scan_id}/export/{file_id}/status’, headers=headers).json()
-                status = file_status[‘status’]
-                logging.info(f’Checking status for {scan_name}: {status}’)</p>
+<p><strong>Monitor until not loading</strong></p>
 
-<p># Download if ready
-            if status == ‘ready’:
-                file_download = requests.get(f’{url}/scans/{scan_id}/export/{file_id}/download’, headers=headers)
-                filename = f’{scan_name.replace(“ “, “_”)}.csv’
-                with open(filename, ‘wb’) as fout:
-                    fout.write(file_download.content)
-                logging.info(f’Wrote: {filename}’)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        status = 'loading'
+        while status == 'loading':
+            time.sleep(1)
+            file_status = requests.get(f'{url}/scans/{scan_id}/export/{file_id}/status', headers=headers).json()
+            status = file_status['status']
+            logging.info(f'Checking status for {scan_name}: {status}')
+</code></pre></div></div>
 
-<p># Convert CSV to JSON
-                selected_columns = [‘Host Start’, ‘Risk’, ‘CVE’, ‘Host’, ‘Name’, ‘Solution’]
-                df = pd.read_csv(filename, usecols=selected_columns)
-                df.rename(columns={‘Host Start’: ‘scanStartDate’, ‘Risk’: ‘risk’, ‘CVE’: ‘cve’, ‘Host’: ‘host’, ‘Name’: ‘name’, ‘Solution’: ‘solution’}, inplace=True)</p>
+<p><strong>Download if ready</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            record_date = df['scanStartDate'].iloc[0][:10]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        if status == 'ready':
+            file_download = requests.get(f'{url}/scans/{scan_id}/export/{file_id}/download', headers=headers)
+            filename = f'{scan_name.replace(" ", "_")}.csv'
+            with open(filename, 'wb') as fout:
+                fout.write(file_download.content)
+            logging.info(f'Wrote: {filename}')
+</code></pre></div></div>
+
+<p><strong>Convert CSV to JSON</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            selected_columns = ['Host Start', 'Risk', 'CVE', 'Host', 'Name', 'Solution']
+            df = pd.read_csv(filename, usecols=selected_columns)
+            df.rename(columns={'Host Start': 'scanStartDate', 'Risk': 'risk', 'CVE': 'cve', 'Host': 'host', 'Name': 'name', 'Solution': 'solution'}, inplace=True)
+            
+            record_date = df['scanStartDate'].iloc[0][:10]
             
             scan_entries = []
             for _, row in df.iterrows():
