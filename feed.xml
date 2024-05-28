@@ -1,5 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://amrutapandhare.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://amrutapandhare.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-05-28T19:00:05+00:00</updated><id>https://amrutapandhare.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">Opsgenie</title><link href="https://amrutapandhare.github.io/blog/2023/opsgenie/" rel="alternate" type="text/html" title="Opsgenie" /><published>2023-04-01T21:01:00+00:00</published><updated>2023-04-01T21:01:00+00:00</updated><id>https://amrutapandhare.github.io/blog/2023/opsgenie</id><content type="html" xml:base="https://amrutapandhare.github.io/blog/2023/opsgenie/"><![CDATA[<h2 id="overview">Overview</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://amrutapandhare.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://amrutapandhare.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-05-28T19:03:45+00:00</updated><id>https://amrutapandhare.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Tenable</title><link href="https://amrutapandhare.github.io/blog/2023/tenableAPI/" rel="alternate" type="text/html" title="Tenable" /><published>2023-04-01T22:01:00+00:00</published><updated>2023-04-01T22:01:00+00:00</updated><id>https://amrutapandhare.github.io/blog/2023/tenableAPI</id><content type="html" xml:base="https://amrutapandhare.github.io/blog/2023/tenableAPI/"><![CDATA[<h2 id="about">About</h2>
+
+<p>Managing Tenable scans programmatically can save time and effort, especially when dealing with multiple scans. This blog will guide you through a Python script that leverages the Tenable API to download specific scans, save them in CSV format, and convert the CSV files to JSON. We’ll explain each part of the script so you can understand and modify it as needed.</p>
+
+<hr />
+<h2 id="overview">Overview</h2>
+
+<p><strong>Script Overview</strong>
+Before diving into the code, let’s outline the main steps the script performs:</p>
+
+<p><strong>Configure logging and set API keys</strong>: Initialize logging and define your Tenable API keys.
+<strong>Fetch scan data</strong>: Retrieve the list of scans from Tenable.io.
+<strong>Download scans</strong>: Export the scans in CSV format.
+<strong>Save and process scans</strong>: Save the CSV files and convert them to JSON format.</p>
+
+<hr />
+<h2 id="script">Script</h2>
+
+<p>Here’s the full script with comments explaining each part:</p>
+
+<p>python
+Copy code
+import requests
+import json
+import csv
+import sys
+import time
+import pandas as pd
+import logging
+import re</p>
+
+<p># Configure logging
+logging.basicConfig(filename=’log.txt’, level=logging.INFO, format=’%(asctime)s:%(levelname)s:%(message)s’)</p>
+
+<p># Set Tenable API keys
+ACCESS_KEY = ‘YOUR_ACCESS_KEY’
+SECRET_KEY = ‘YOUR_SECRET_KEY’
+scan_search_list = [‘scan1’, ‘scan2’, ‘scan3’]</p>
+
+<p># Set the base URL and headers for the Tenable API
+url = ‘https://cloud.tenable.com’
+headers = {‘X-ApiKeys’: f’accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};’}</p>
+
+<p>for scan_search in scan_search_list:
+    logging.info(f”Processing scan search: {scan_search}”)</p>
+
+<p># Fetching scans
+    scans = requests.get(f’{url}/scans’, headers=headers).json()[‘scans’]
+    for scan in scans:
+        if scan_search.lower() in scan[‘name’].lower() and not scan[‘name’].endswith(‘_OLD’):
+            scan_id = scan[‘id’]
+            scan_name = scan[‘name’]
+            uuid = scan.get(“uuid”, scan.get(“wizard_uuid”, “”))  # UUID or WIZARD_UUID
+            logging.info(f’Found: {scan_name} ({scan_id})’)</p>
+
+<p># Request download
+            export_request = {
+                ‘chapters’: ‘vuln_hosts_summary,vuln_by_host,compliance_exec,remediations,vuln_by_plugin,compliance’,
+                ‘filter.search_type’: ‘and’,
+                ‘format’: ‘csv’
+            }
+            file_request = requests.post(f’{url}/scans/{scan_id}/export’, headers=headers, json=export_request)
+            if file_request.status_code != 200 or ‘error’ in file_request.json():
+                logging.error(f’Request failed for {scan_name}: {file_request.text}’)
+                continue  # Skip to the next scan</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        file_id = file_request.json()['file']
+</code></pre></div></div>
+
+<p># Monitor until not loading
+            status = ‘loading’
+            while status == ‘loading’:
+                time.sleep(1)
+                file_status = requests.get(f’{url}/scans/{scan_id}/export/{file_id}/status’, headers=headers).json()
+                status = file_status[‘status’]
+                logging.info(f’Checking status for {scan_name}: {status}’)</p>
+
+<p># Download if ready
+            if status == ‘ready’:
+                file_download = requests.get(f’{url}/scans/{scan_id}/export/{file_id}/download’, headers=headers)
+                filename = f’{scan_name.replace(“ “, “_”)}.csv’
+                with open(filename, ‘wb’) as fout:
+                    fout.write(file_download.content)
+                logging.info(f’Wrote: {filename}’)</p>
+
+<p># Convert CSV to JSON
+                selected_columns = [‘Host Start’, ‘Risk’, ‘CVE’, ‘Host’, ‘Name’, ‘Solution’]
+                df = pd.read_csv(filename, usecols=selected_columns)
+                df.rename(columns={‘Host Start’: ‘scanStartDate’, ‘Risk’: ‘risk’, ‘CVE’: ‘cve’, ‘Host’: ‘host’, ‘Name’: ‘name’, ‘Solution’: ‘solution’}, inplace=True)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            record_date = df['scanStartDate'].iloc[0][:10]
+            
+            scan_entries = []
+            for _, row in df.iterrows():
+                entry = {
+                    'scanStartDate': 'None' if pd.isna(row['scanStartDate']) else row['scanStartDate'],
+                    'risk': 'None' if pd.isna(row['risk']) else row['risk'],
+                    'cve': 'None' if pd.isna(row['cve']) else row['cve'],
+                    'host': 'None' if pd.isna(row['host']) else row['host'],
+                    'name': 'None' if pd.isna(row['name']) else row['name'],
+                    'solution': 'None' if pd.isna(row['solution']) else row['solution']
+                }
+                scan_entries.append(entry)
+            
+            additional_info = {"recordDate": record_date, "scanEntries": scan_entries}
+            final_json_data = json.dumps(additional_info) + '\n'
+
+            json_filename = f'{scan_name}-{record_date}.json'
+            with open(json_filename, 'w') as json_file:
+                json_file.write(final_json_data)
+            logging.info(f'Appended information to JSON: {json_filename}')
+        else:
+            logging.error(f'Issue with file for {scan_name}: {status}')
+</code></pre></div></div>
+
+<p>print(“Script execution completed.”)</p>
+
+<hr />
+<h2 id="additional-use-cases">Additional Use Cases</h2>
+
+<p><strong>Automated Report Generation</strong>
+Scheduled execution of the script to regularly download and process scans, generating periodic reports.
+Email notifications to send generated reports or alerts based on scan results.</p>
+
+<p><strong>Integration with SIEM Systems</strong>
+Send JSON data to a Security Information and Event Management (SIEM) system for further analysis and correlation.
+Webhook integration to trigger real-time actions based on scan results.</p>
+
+<p><strong>Visualization and Dashboarding</strong>
+Data visualization tools like Matplotlib or Seaborn to create visual reports from the scan data.
+Integration with BI tools like Tableau or Power BI to create interactive dashboards.</p>
+
+<p><strong>Advanced Filtering and Analysis</strong>
+Custom filters to extract specific vulnerabilities or assets based on certain criteria.
+Trend analysis to monitor vulnerability trends over time.</p>
+
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This script automates the process of downloading and processing Tenable scan data, making it easier to manage and analyze scan results. By following the detailed steps above, you can adapt the script to fit your specific needs and integrate it into your workflow. Happy coding!</p>]]></content><author><name>Amruta Pandhare</name></author><summary type="html"><![CDATA[Automating Tenable Scan Downloads and Conversions to CSV and JSON with Python]]></summary></entry><entry><title type="html">Opsgenie</title><link href="https://amrutapandhare.github.io/blog/2023/opsgenie/" rel="alternate" type="text/html" title="Opsgenie" /><published>2023-04-01T21:01:00+00:00</published><updated>2023-04-01T21:01:00+00:00</updated><id>https://amrutapandhare.github.io/blog/2023/opsgenie</id><content type="html" xml:base="https://amrutapandhare.github.io/blog/2023/opsgenie/"><![CDATA[<h2 id="overview">Overview</h2>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
