@@ -24,12 +24,14 @@ Managing Tenable scans programmatically can save time and effort, especially whe
 ***
 ## Overview
 
-**Script Overview**
 Before diving into the code, let's outline the main steps the script performs:
 
 **Configure logging and set API keys**: Initialize logging and define your Tenable API keys.
+
 **Fetch scan data**: Retrieve the list of scans from Tenable.io.
+
 **Download scans**: Export the scans in CSV format.
+
 **Save and process scans**: Save the CSV files and convert them to JSON format.
 
 ***
@@ -48,22 +50,28 @@ import pandas as pd
 import logging
 import re
 
-  # Configure logging
+**Configure logging**
+
 logging.basicConfig(filename='log.txt', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
-  # Set Tenable API keys
+ **Set Tenable API keys**
+
 ACCESS_KEY = 'YOUR_ACCESS_KEY'
+
 SECRET_KEY = 'YOUR_SECRET_KEY'
+
 scan_search_list = ['scan1', 'scan2', 'scan3']
 
-  # Set the base URL and headers for the Tenable API
+**Set the base URL and headers for the Tenable API**
+
 url = 'https://cloud.tenable.com'
+
 headers = {'X-ApiKeys': f'accessKey={ACCESS_KEY}; secretKey={SECRET_KEY};'}
+
+**Fetching scans**
 
 for scan_search in scan_search_list:
     logging.info(f"Processing scan search: {scan_search}")
-
-  # Fetching scans
     scans = requests.get(f'{url}/scans', headers=headers).json()['scans']
     for scan in scans:
         if scan_search.lower() in scan['name'].lower() and not scan['name'].endswith('_OLD'):
@@ -72,7 +80,8 @@ for scan_search in scan_search_list:
             uuid = scan.get("uuid", scan.get("wizard_uuid", ""))  # UUID or WIZARD_UUID
             logging.info(f'Found: {scan_name} ({scan_id})')
 
-  # Request download
+**Request download**
+
             export_request = {
                 'chapters': 'vuln_hosts_summary,vuln_by_host,compliance_exec,remediations,vuln_by_plugin,compliance',
                 'filter.search_type': 'and',
@@ -85,7 +94,8 @@ for scan_search in scan_search_list:
 
             file_id = file_request.json()['file']
 
-  # Monitor until not loading
+**Monitor until not loading**
+
             status = 'loading'
             while status == 'loading':
                 time.sleep(1)
@@ -93,7 +103,8 @@ for scan_search in scan_search_list:
                 status = file_status['status']
                 logging.info(f'Checking status for {scan_name}: {status}')
 
-   # Download if ready
+**Download if ready**
+   
             if status == 'ready':
                 file_download = requests.get(f'{url}/scans/{scan_id}/export/{file_id}/download', headers=headers)
                 filename = f'{scan_name.replace(" ", "_")}.csv'
@@ -101,7 +112,8 @@ for scan_search in scan_search_list:
                     fout.write(file_download.content)
                 logging.info(f'Wrote: {filename}')
 
-  # Convert CSV to JSON
+**Convert CSV to JSON**
+
                 selected_columns = ['Host Start', 'Risk', 'CVE', 'Host', 'Name', 'Solution']
                 df = pd.read_csv(filename, usecols=selected_columns)
                 df.rename(columns={'Host Start': 'scanStartDate', 'Risk': 'risk', 'CVE': 'cve', 'Host': 'host', 'Name': 'name', 'Solution': 'solution'}, inplace=True)
