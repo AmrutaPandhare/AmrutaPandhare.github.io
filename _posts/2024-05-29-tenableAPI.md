@@ -132,9 +132,9 @@ for scan_search in scan_search_list:
                 logging.error(f'Issue with file for {scan_name}: {status}')
 
 print("Script execution completed.")
-```python
 
 ***
+
 ## Additional Use Cases
 
 **Automated Report Generation**
